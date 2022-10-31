@@ -7,7 +7,7 @@ export default css`
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #00000080;
     opacity: 0;
     visibility: hidden;
     transform: scale(1.1);
@@ -60,6 +60,7 @@ export default css`
     background-color: #FAFAFA;
     border-radius: 12px;
     border-color: transparent;
+    font-family: 'Roboto';
     resize: none;
   }
 
@@ -68,30 +69,20 @@ export default css`
   }
   .answer::placeholder{
     font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
   }
 
-  // .answer {
-  //   margin-bottom: 10px;
-  //   // padding: 5px;
-  //   border: 2px solid #ccc;
-  //   border-radius: 4px;
-  //   background-color: #f8f8f8;
-  //   resize: none;
-  //   box-sizing: border-box;
-  // }
-
-  // .answer:focus{
-  //   outline: none;
-  // }
-  // .answer::placeholder{
-  //   font-family: 'Roboto';
-  //   font-style: normal;
-  //   font-weight: 400;
-  //   font-size: 14px;
-  //   line-height: 16px;
-  // }
+  .send-answer {
+    border-color: transparent;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #9cdbff;
+    border-radius: 10px;
+    color: #27AE60;
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+  }
 `;

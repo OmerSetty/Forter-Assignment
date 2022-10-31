@@ -3,24 +3,20 @@ import {css} from 'lit';
 export default css`
   .chat-header {
     padding: 10px;
-    // padding: 10px 10px 0px 10px;
     font-family: 'Roboto';
+    line-height: 16px;
   }
   
   .chat-headline {
-    color: rgba(0, 0, 0, 0.85);
-    font-style: normal;
+    color: #000000d9;
     font-weight: 500;
     font-size: 16px;
-    line-height: 16px;
     margin-bottom: 10px;
   }
   
   .chat-data {
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
   }
 
   .online {

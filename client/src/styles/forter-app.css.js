@@ -6,6 +6,7 @@ export default css`
     display: flex;
   }
   .chat-container {
-    max-width: 1000px;
+    max-width: 50vw;
+    min-width: 50vw;
   }
 `;

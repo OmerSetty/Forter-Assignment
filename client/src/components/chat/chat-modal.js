@@ -13,7 +13,7 @@ export class ChatModal extends LitElement {
   
   constructor() {
     super();
-    this.answer = ''
+    this.answer = '';
   }
   
   static styles = [style];
@@ -27,7 +27,6 @@ export class ChatModal extends LitElement {
   }
 
   _sendAnswer() {
-    console.log('answer', this.answer);
     const event = new CustomEvent('send-message', {
       detail: {
         type: 'answer',
@@ -48,12 +47,12 @@ export class ChatModal extends LitElement {
       'show-modal': isDisplayModal
     }
     return html`
-      <div class=${classMap(modalClasses)}>
+      <div class='modal ${classMap(modalClasses)}'>
         <div class="modal-content">
           <span class="close-button" @click=${_toggleModal}>&times;</span>
           <p class='question'>${question}</p>
           <textarea type="text" .value="${answer}" @change=${_answerChanged} class='answer' placeholder='Write your answer here...' rows="4" cols="50"></textarea>
-          <button @click=${_sendAnswer}>Send Answer</button>
+          <button class='send-answer' @click=${_sendAnswer}>Send Answer</button>
         </div>
       </div>
     `;

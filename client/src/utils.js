@@ -5,3 +5,8 @@ export function getCurrentHourAndMinutes() {
   if (minutes.length === 1) minutes = minutes.padStart(2, '0');
   return `${hour}:${minutes}`;
 }
+
+export function addQuestionMark(question) {
+  if (question[question.length-1] !== '?') return question + '?';
+  return question;
+}

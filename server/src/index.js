@@ -31,7 +31,11 @@ const SUGGESTIONS_AMOUNT = 3;
 
 io.on('connection', (socket) => {
   console.log('new connection');
-  io.emit('new connection', 'new connection');
+
+  io.emit('connections-amount', io.engine.clientsCount);
+  socket.on('disconnect', () => {
+    io.emit('connections-amount', io.engine.clientsCount);
+  });
 
   socket.on('send-message', async message => {
     socket.broadcast.emit('new-message', message);

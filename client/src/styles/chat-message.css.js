@@ -1,10 +1,10 @@
 import { css } from 'lit';
 
 export default css`
-
   .message-container {
     display: flex;
-    // position: relative;
+    font-weight: 400;
+    line-height: 16px;
   }
   .change {
     display: none;
@@ -27,7 +27,6 @@ export default css`
     padding: 10px;
     margin: 10px;
     font-family: 'Roboto';
-    font-style: normal;
   }
 
   .my-message {
@@ -54,22 +53,17 @@ export default css`
 
   
   .message-question {
-    font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
-    color: rgba(104, 104, 104, 0.85); 
+    color: #686868d9;
+    margin-bottom: 4px;
   }
   .message-content {
-    white-space: pre-wrap;
-    font-weight: 400;
+    // white-space: pre-wrap;
     font-size: 14px;
-    line-height: 16px;
     color: #000000d9;
   }
   .message-time {
-    font-weight: 300;
     font-size: 12px;
-    line-height: 16px;
-    color: rgba(0, 0, 0, 0.45);
+    color: #00000073;
   }
 `;

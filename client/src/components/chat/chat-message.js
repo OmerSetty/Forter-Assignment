@@ -13,8 +13,8 @@ export class ChatMessage extends LitElement {
 
   constructor() {
     super();
-    this.message = {},
-      this.isDisplayModal = false
+    this.message = {}
+    this.isDisplayModal = false
   }
 
   static styles = [style];
@@ -33,22 +33,10 @@ export class ChatMessage extends LitElement {
     });
     e.target.dispatchEvent(event);
   }
-  // _sendMessage(question) {
-  //   console.log('sending', question);
-  //   const event = new CustomEvent('send-message', {
-  //     detail: {
-  //       type: 'question',
-  //       content: question
-  //     },
-  //     composed: true,
-  //   });
-  //   this.dispatchEvent(event);
-  // }
 
   render() {
     const { message, _toggleModal, _sendMessage, isDisplayModal } = this;
     const messageClasses = {
-      'message': true,
       'my-message': message.from === 'me',
       'other-message': message.from !== 'me',
       'question-message': message.type === 'question',
@@ -59,21 +47,26 @@ export class ChatMessage extends LitElement {
 
     return html`
       <div class='message-container'>
-        <div class=${classMap(messageClasses)}>
+        <div class='message ${classMap(messageClasses)}'>
           ${message.question && html`
           <div class='message-question'>${message.question}</div>
           `}
-          <div class='message-content'>${message.content}</div>
+          <div class='message-content'>
+            ${['answer-from-bot', 'suggestions-from-bot', 'no-answer-from-bot'].includes(message.type) ? html`
+            <img src='/src/icons/bot.png' class='respond-img' alt="respond" />
+            ` : ''}
+            ${message.content}
+          </div>
           ${message.suggestions && html`
           ${message.suggestions.map(suggestion => html`
-            <p @click=${(e) => _sendMessage(e, suggestion)}>${suggestion}</p>
+          <p @click=${(e) => _sendMessage(e, suggestion)}>${suggestion}</p>
           `)}
           `}  
           <div class='message-time'>${message.time}</div>
         </div>
         ${(message.type === 'question') ? html`
         <div class='change'>
-          <img src='/src/icons/respond.png' @click=${_toggleModal} class='respond-img' alt="abc" />
+          <img src='/src/icons/respond.png' @click=${_toggleModal} class='respond-img' alt="respond" />
         </div>
         ` : ''}
       </div>

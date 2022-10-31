@@ -9,6 +9,7 @@ export default css`
   .messages-input {
     padding: 10px;
     flex: auto;
+    font-family: 'Roboto';
     background-color: #FAFAFA;
     border-radius: 12px;
     border-color: transparent;
@@ -18,10 +19,8 @@ export default css`
   }
   .messages-input::placeholder{
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
-    line-height: 16px;
   }
 
   .send-button {
@@ -29,13 +28,8 @@ export default css`
     background-color: transparent;
     color: #27AE60;
     font-family: 'Roboto';
-    font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    line-height: 16px;
-  }
-
-  .question-to-answer {
-    
+    cursor: pointer;
   }
 `;
