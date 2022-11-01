@@ -17,7 +17,7 @@ export default css`
 	  font-size: 20px;
   }
 
-  .respond-img {
+  .img {
     width: 20px;
     height: 20px;
   }
@@ -38,19 +38,6 @@ export default css`
     border-radius: 0px 16px 16px 16px;
   }
 
-  .question-message {
-    background-color: #F8EAEE;
-  }
-  .answer-message {
-    background: #F4F4F7;
-  }
-  .bot-no-answer-message {
-    background-color: #FFE8BB;
-  }
-  .bot-answer-message {
-    background-color: #9CDBFF;
-  }
-
   
   .message-question {
     font-size: 14px;
@@ -58,9 +45,11 @@ export default css`
     margin-bottom: 4px;
   }
   .message-content {
-    // white-space: pre-wrap;
     font-size: 14px;
     color: #000000d9;
+  }
+  .suggestion {
+    cursor: pointer;
   }
   .message-time {
     font-size: 12px;

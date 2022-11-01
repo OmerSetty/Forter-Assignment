@@ -8,8 +8,6 @@ export default css`
     width: 100%;
     height: 100%;
     background-color: #00000080;
-    opacity: 0;
-    visibility: hidden;
     transform: scale(1.1);
     transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
   }
@@ -43,13 +41,6 @@ export default css`
     background-color: darkgray;
   }
 
-  .show-modal {
-    opacity: 1;
-    visibility: visible;
-    transform: scale(1.0);
-    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
-  }
-
   .question {
     align-self: flex-start;
   }
@@ -67,6 +58,7 @@ export default css`
   .answer:focus{
     outline: none;
   }
+  
   .answer::placeholder{
     font-family: 'Roboto';
     font-size: 14px;

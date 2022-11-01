@@ -7,8 +7,38 @@ export default css`
     justify-content: center;
   }
   .instructions {
-    color: blue;
-    border: 1px solid black;
-    width: 200px;
+    font-family: 'Roboto';
+    padding-left: 20%;
+    padding-right: 20%;
+    animation: fadeIn 3s;
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  h1 {
+    font-size: 90px;
+    margin: 0px 0px 10px 0px;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  
+  code {
+    font-size: 24px;
+  }
+  
+  img {
+    vertical-align: middle;  
+    line-height: 24px;  
+  }
+  
+  .icons {
+    width: 20px;
+    height: 20px;
   }
 `;

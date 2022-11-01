@@ -10,3 +10,16 @@ export function addQuestionMark(question) {
   if (question[question.length-1] !== '?') return question + '?';
   return question;
 }
+
+export function addEnterInputEvent(renderRoot, inputId, executerId) {
+  const inputElement = renderRoot.getElementById(inputId);
+  const executerElement = renderRoot.getElementById(executerId);
+
+  inputElement.addEventListener('keypress', e => {
+    if (e.key !== 'Enter') return;
+    inputElement.blur();
+    inputElement.value = '';
+    inputElement.focus();
+    executerElement.click();
+  });
+}

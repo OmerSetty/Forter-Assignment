@@ -1,4 +1,4 @@
-import {css} from 'lit';
+import { css } from 'lit';
 
 export default css`
   .chat-header {
@@ -17,6 +17,7 @@ export default css`
   .chat-data {
     font-weight: 400;
     font-size: 14px;
+    display: flex;
   }
 
   .online {
@@ -26,4 +27,12 @@ export default css`
   .answered {
     color: #9CDBFF;
   }
+
+  .clear-chat {
+    margin-left: auto;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+  }
+  
 `;

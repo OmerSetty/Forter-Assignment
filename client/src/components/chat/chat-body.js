@@ -6,14 +6,15 @@ import './custom-hr.js';
 export class ChatBody extends LitElement {
   static get properties() {
     return {
-      messages: {}
+      messages: {},
+      socketID: {}
     };
   }
 
   render() {
-    const { messages } = this;
+    const { messages, socketID } = this;
     return html`
-      <chat-messages .messages=${messages}></chat-messages>
+      <chat-messages .messages=${messages} .socketID=${socketID}></chat-messages>
       <custom-hr></custom-hr>
       <chat-controls></chat-controls>
     `;

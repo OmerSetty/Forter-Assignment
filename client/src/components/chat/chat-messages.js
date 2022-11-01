@@ -5,20 +5,21 @@ import style from '../../styles/chat-messages.css.js';
 export class ChatMessages extends LitElement {
   static get properties() {
     return {
-      messages: {}
+      messages: { type: Array },
+      socketID: { type: String }
     };
   }
 
   static styles = [style];
- 
+
   render() {
-    const { messages } = this;
+    const { messages, socketID } = this;
     return html`
       <div class='wrapper'>
         <span class="scroll-start-at-top">&nbsp;</span>
         <div class='chat-messages'>
           ${messages.map(message => html`
-          <chat-message .message=${message}></chat-message>
+          <chat-message .message=${message} .socketID=${socketID}></chat-message>
           `)}
         </div>
       </div>
