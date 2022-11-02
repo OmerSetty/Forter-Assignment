@@ -37,7 +37,6 @@ io.on('connection', (socket) => {
   });
 
   socket.on('send-message', async message => {
-    await deleteAll('questions');
     socket.broadcast.emit('new-message', message);
 
     if (message.type === 'question') {
